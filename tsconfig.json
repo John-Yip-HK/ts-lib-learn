@@ -19,10 +19,5 @@
 		"allowSyntheticDefaultImports": true
 	},
 	/* Avoid transpiling below directories and files. */
-	"exclude": [
-		"dist",
-		"node_modules",
-		"src/**/*.test.tsx",
-		"src/**/*.stories.tsx"
-	]
+	"exclude": ["dist", "node_modules", "src/**/*.stories.tsx"]
 }
