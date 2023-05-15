@@ -1,18 +1,28 @@
 {
-  "name": "ts-lib-learn",
-  "version": "0.0.1",
-  "description": "TS lib tutorial",
-  "main": "src/index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "John Yip",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/react": "^18.2.6",
-    "@types/styled-components": "^5.1.26",
-    "react": "^18.2.0",
-    "styled-components": "^5.3.10",
-    "typescript": "^5.0.4"
-  }
+	"name": "ts-lib-learn",
+	"version": "0.0.1",
+	"description": "TS lib tutorial",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "rollup -c"
+	},
+	"author": "John Yip",
+	"license": "ISC",
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^25.0.0",
+		"@rollup/plugin-node-resolve": "^15.0.2",
+		"@rollup/plugin-terser": "^0.4.1",
+		"@rollup/plugin-typescript": "^11.1.1",
+		"@types/react": "^18.2.6",
+		"@types/styled-components": "^5.1.26",
+		"react": "^18.2.0",
+		"rollup": "^3.21.7",
+		"rollup-plugin-dts": "^5.3.0",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"styled-components": "^5.3.10",
+		"tslib": "^2.5.0",
+		"typescript": "^5.0.4"
+	}
 }
