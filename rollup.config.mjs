@@ -26,14 +26,23 @@ export default [
 			peerDepsExternal(),
 			resolve(),
 			commonjs(),
-			typescript({ tsconfig: "./tsconfig.json" }),
+			typescript({
+				tsconfig: "./tsconfig.json",
+				exclude: [
+					"dist",
+					"node_modules",
+					"src/**/*.stories.tsx",
+					"src/**/*.{test,spec}.{j,t}s?(x)",
+				],
+			}),
 			terser(),
 		],
 		external: ["react", "react-dom", "styled-components"],
 	},
 	{
-		input: "src/index.ts",
-		output: [{ file: "dist/types.d.ts", format: "es" }],
+		input: "dist/esm/types/index.d.ts",
+		output: [{ file: "dist/types.d.ts", format: "esm" }],
 		plugins: [dts()],
+		external: [/\.(css|less|scss)$/],
 	},
 ];
