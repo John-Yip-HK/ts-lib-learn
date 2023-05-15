@@ -1,6 +1,6 @@
 {
 	"name": "ts-lib-learn",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "A simple React library for learning how to write it.",
 	"main": "dist/cjs/index.js",
 	"module": "dist/esm/index.js",
@@ -8,6 +8,11 @@
 	"files": [
 		"dist"
 	],
+	"repository": {
+		"type": "git",
+		"directory": "https://github.com/John-Yip-HK/ts-lib-learn"
+	},
+	"homepage": "https://github.com/John-Yip-HK/ts-lib-learn",
 	"scripts": {
 		"build": "rollup -c",
 		"storybook": "storybook dev -p 6006",
